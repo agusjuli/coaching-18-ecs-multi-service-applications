@@ -42,3 +42,4 @@ jobs:
         aws ecs update-service --cluster ecs-app-cluster \
           --service message-queue-service \
           --force-new-deployment
+
