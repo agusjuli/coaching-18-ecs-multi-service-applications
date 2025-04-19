@@ -23,13 +23,14 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
 
     # Step 4: Build Docker images and push to ECR
-    - name: Build and Push Docker images
-      run: 
-        docker build -t ${{ secrets.255945442255.dkr.ecr.us-east-1.amazonaws.com/service-1-repo }} ./file-upload-service
-        docker build -t ${{ secrets.255945442255.dkr.ecr.us-east-1.amazonaws.com/service-2-repo }} ./message-queue-service
+- name: Build and Push Docker images
+  run: |
+    docker build -t ${{ secrets.ECR_REPO_URL_SERVICE_1 }} ./file-upload-service
+    docker build -t ${{ secrets.ECR_REPO_URL_SERVICE_2 }} ./message-queue-service
 
-        docker push ${{ secrets.255945442255.dkr.ecr.us-east-1.amazonaws.com/service-1-repo }}
-        docker push ${{ secrets.255945442255.dkr.ecr.us-east-1.amazonaws.com/service-2-repo }}
+    docker push ${{ secrets.ECR_REPO_URL_SERVICE_1 }}
+    docker push ${{ secrets.ECR_REPO_URL_SERVICE_2 }}
+
 
     # Step 5: Deploy to ECS
     - name: Deploy to ECS
@@ -41,3 +42,4 @@ jobs:
         aws ecs update-service --cluster ecs-app-cluster \
           --service message-queue-service \
           --force-new-deployment
+

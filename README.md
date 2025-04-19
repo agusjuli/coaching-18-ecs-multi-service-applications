@@ -1,5 +1,6 @@
 # coaching-18-ecs-multi-service-applications
 
+
 # 🚀 Application Services
 
 This repo contains two Flask microservices deployed on ECS via ECR.
