@@ -24,7 +24,7 @@ jobs:
 
     # Step 4: Build Docker images and push to ECR
     - name: Build and Push Docker images
-      run: |
+      run: 
         docker build -t ${{ secrets.255945442255.dkr.ecr.us-east-1.amazonaws.com/service-1-repo }} ./file-upload-service
         docker build -t ${{ secrets.255945442255.dkr.ecr.us-east-1.amazonaws.com/service-2-repo }} ./message-queue-service
 
@@ -33,7 +33,7 @@ jobs:
 
     # Step 5: Deploy to ECS
     - name: Deploy to ECS
-      run: |
+      run: 
         aws ecs update-service --cluster ecs-app-cluster \
           --service file-upload-service \
           --force-new-deployment
