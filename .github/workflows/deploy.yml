@@ -32,11 +32,11 @@ jobs:
     # Step 4: Build Docker images and push to ECR
     - name: Build and Push Docker images
       run: |
-            docker build -t ${{ secrets.SERVICE_1_ECR_URL }} ./file-upload-service
-            docker build -t ${{ secrets.SERVICE_2_ECR_URL }} ./message-queue-service
+            docker build -t ${{ secrets.ECR_REPO_SERVICE_1 }} ./file-upload-service
+            docker build -t ${{ secrets.ECR_REPO_SERVICE_2 }} ./message-queue-service
 
-            docker push ${{ secrets.SERVICE_1_ECR_URL }}
-            docker push ${{ secrets.SERVICE_2_ECR_URL }}
+            docker push ${{ secrets.ECR_REPO_SERVICE_1 }}
+            docker push ${{ secrets.ECR_REPO_SERVICE_2 }}
 
 
     # Step 5: Deploy to ECS
