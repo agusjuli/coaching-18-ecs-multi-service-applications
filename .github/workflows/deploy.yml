@@ -42,6 +42,7 @@ jobs:
     # Step 5: Deploy to ECS
     - name: Update ECS services
       run: |
-          aws ecs update-service --cluster ecs-app-cluster --service file-upload-service --force-new-deployment
-          aws ecs update-service --cluster ecs-app-cluster --service message-queue-service --force-new-deployment
+          aws ecs update-service --cluster ecs-app-cluster --service service-1 --force-new-deployment
+          aws ecs update-service --cluster ecs-app-cluster --service service-2 --force-new-deployment
+
 
