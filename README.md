@@ -33,8 +33,8 @@ application-services/
 | `AWS_SECRET_ACCESS_KEY` | IAM user secret                   |
 | `AWS_REGION`            | AWS region (e.g. `us-east-1`)     |
 | `AWS_ACCOUNT_ID`        | Your AWS account ID               |
-| `ECR_REPO_SERVICE_1`    | From [infra-terraform](https://github.com/your-org/infra-terraform) output             |
-| `ECR_REPO_SERVICE_2`    | From [infra-terraform](https://github.com/your-org/infra-terraform) output             |
+| `ECR_REPO_SERVICE_1`    | From [infra-terraform](https://github.com/agusjuli/infra-terraform) output             |
+| `ECR_REPO_SERVICE_2`    | From [infra-terraform](https://github.com/agusjuli/infra-terraform) output             |
 
 ---
 
