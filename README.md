@@ -33,8 +33,8 @@ application-services/
 | `AWS_SECRET_ACCESS_KEY` | IAM user secret                   |
 | `AWS_REGION`            | AWS region (e.g. `us-east-1`)     |
 | `AWS_ACCOUNT_ID`        | Your AWS account ID               |
-| `ECR_REPO_SERVICE_1`    | From [infra-terraform](https://github.com/your-org/infra-terraform) output             |
-| `ECR_REPO_SERVICE_2`    | From [infra-terraform](https://github.com/your-org/infra-terraform) output             |
+| `ECR_REPO_SERVICE_1`    | From [infra-terraform](https://github.com/agusjuli/coaching-18-ecs-multi-service-tf-infra.git) output   
+| `ECR_REPO_SERVICE_2`    | From [infra-terraform](https://github.com/agusjuli/coaching-18-ecs-multi-service-tf-infra.git) output             |
 
 ---
 
@@ -59,10 +59,6 @@ Example step to add at the end of `deploy.yml`:
 
 ---
 
-## 🧪 Local Dev
-You can test the services locally with Docker and LocalStack. See [testing guide](#) for steps.
-
----
 
 ## 📬 Endpoints
 - `service1`: `POST /upload` – Uploads file to S3
